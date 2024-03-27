@@ -1,0 +1,26 @@
+#include <iostream>
+
+// Function to compute the sum of series
+int sumOfSeries(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; ++i) {
+        sum += (i * (i + 1)) / 2; // Formula for sum of first i natural numbers
+    }
+    return sum;
+}
+
+int main() {
+    int n;
+    std::cout << "Enter a positive integer: ";
+    std::cin >> n;
+
+    if (n <= 0) {
+        std::cout << "Please enter a positive integer." << std::endl;
+        return 1; // Exit with error code 1
+    }
+
+    int result = sumOfSeries(n);
+    std::cout << "Sum of the series: " << result << std::endl;
+
+    return 0;
+}
